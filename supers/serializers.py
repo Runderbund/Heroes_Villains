@@ -6,6 +6,8 @@ class SuperSerializer(serializers.ModelSerializer):
         queryset=SuperType.objects.all(),
         slug_field='type'
      )
+    # Allows for foreign key to be passed as a string instead of an id integer
+    # (We didn't cover slug fields in the course, so there may be a different way to do this, but this does seem to work. I'm curious if there's a better way to do this.)
 
     class Meta:
         model = Super

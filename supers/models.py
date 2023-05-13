@@ -1,5 +1,5 @@
 from django.db import models
-from super_types.models import SuperType
+from super_types.models import SuperType # Passes to serializers in the same folder as this file
 
 class Super(models.Model):
     name = models.CharField(max_length=255)
